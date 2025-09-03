@@ -9,8 +9,8 @@ import modal
 # Load environment variables from .env file
 load_dotenv()
 
-streamlit_script_local_path = Path(__file__).parent / "st_run.py"
-streamlit_script_remote_path = "/root/st_run.py"
+streamlit_script_local_path = Path(__file__).parent / "streamlit_run.py"
+streamlit_script_remote_path = "/root/streamlit_run.py"
 image = (
     modal.Image.debian_slim(python_version="3.9")
     .uv_pip_install("streamlit", "supabase", "pandas", "plotly", "python-dotenv")
